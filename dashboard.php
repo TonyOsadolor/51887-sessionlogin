@@ -6,10 +6,6 @@ date_default_timezone_set("Africa/Lagos");
 
 //Checking to see if this Session is set
 if(isset($_SESSION['email'])){
-    $surname = $_SESSION["surname"];
-    $othernames = $_SESSION["othernames"];
-    $phone = $_SESSION["phone"];
-    $email = $_SESSION["email"];
 
 ?>
 
@@ -53,7 +49,7 @@ if(isset($_SESSION['email'])){
                     <a href="logout.php" class="nav-link">Logout</a>
                 </li>
             </ul>
-            <marquee behavior="" direction="" style="color:white;"><b><?php echo $othernames; ?></b> Welcome to your Profile</marquee>
+            <marquee behavior="" direction="" style="color:white;"><b><?php echo $_SESSION["othernames"]; ?></b> Welcome to your Profile</marquee>
         </nav>
 		<div class="col-12">
 		    <h2><center>Welcome Home</center></h2>
@@ -65,19 +61,19 @@ if(isset($_SESSION['email'])){
                     <table class="table table-responsive table-striped table-dark table-hover" style="margin: 2% auto;max-width:600px;padding:5px;border-radius:8px;">
                         <tr>
                             <td>Surname</td>
-                            <td><b><?php echo $surname; ?></b></td>
+                            <td><b><?php echo $_SESSION["surname"]; ?></b></td>
                         </tr>
                         <tr>
                             <td>Other Names</td>
-                            <td><b><?php echo $othernames; ?></b></td>
+                            <td><b><?php echo $_SESSION["othernames"]; ?></b></td>
                         </tr>
                         <tr>
                             <td>Phone</td>
-                            <td><b><?php echo $phone; ?></b></td>
+                            <td><b><?php echo $_SESSION["phone"]; ?></b></td>
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td><b><?php echo $email; ?></b></td>
+                            <td><b><?php echo $_SESSION["email"]; ?></b></td>
                         </tr>
                     </table>
                 </div>

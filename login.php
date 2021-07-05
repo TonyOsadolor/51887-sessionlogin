@@ -30,6 +30,7 @@ if(isset($_POST["login"])){
         echo "<script>alert('Sorry, Account with ($email) Not Found!')</script>";
         
         echo "<div class='container'><div class='alert alert-danger'><center><h3>ERROR!! ACCOUNT NOT FOUND!</h3><p>Sorry, No Account with <i>($email)</i> was found on our Database. <br>Kindly Supply the right Email.<br><i>Thank You!</i></p><a href='index.php'><button class='btn btn-warning'>Back Home</button></a></center></div></div>";
+        
     } else {
         
         //If the Accounts Details match and it is not disabled, then log User in            
@@ -37,12 +38,13 @@ if(isset($_POST["login"])){
          
          echo "<script>location.href='dashboard.php'</script>";
          
-         //Storing the Session ID to be used througout, while User stays logged in
-        $_SESSION["surname"] = $surname;
-        $_SESSION["othernames"] = $othernames;
-        $_SESSION["phone"] = $phone;
-        $_SESSION["email"] = $email;
-        $_SESSION["password1"] = $password1;
+        //Storing the Session ID to be used througout, while User stays logged in
+        $email = $_SESSION["email"];
+        $surname = $_SESSION["surname"];
+        $othernames = $_SESSION["othernames"];
+        $phone = $_SESSION["phone"];
+        $email = $_SESSION["email"];
+        $password1 =$_SESSION["password1"];
     }
 }   
 
